@@ -12,10 +12,10 @@ body {
 h1 {
   color: rgb(18, 35, 64);
   font-size: 2.5rem;
+  background: #ffffff;
   margin: 20px 0;
   padding: 18px 0;
   text-align: center;
-  background: #ffffff;
 }
 h2 {
   color: rgb(24, 40, 72);
@@ -28,25 +28,16 @@ h3 {
   margin: 0.5rem 0;
 }
 
-/* Header / Navigation (sticky) */
+/* Sticky header/navigation */
 .wrap {
   position: sticky;
   top: 0;
-  background: #ffffff;
-  z-index: 999;
+  background: #fff;
   padding: 12px 18px;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
   display: flex;
-  align-items: center;
   justify-content: space-between;
   gap: 12px;
-}
-
-/* Nav links */
-nav {
-  display: flex;
-  gap: 12px;
-  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 nav a {
   text-decoration: none;
@@ -55,80 +46,55 @@ nav a {
   padding: 6px 8px;
   border-radius: 6px;
 }
-nav a:hover,
-nav a:focus {
+nav a:hover {
   background: rgba(34,51,85,0.06);
   color: #1b4f8a;
 }
 
-/* Page Container */
-.container {
-  max-width: 1100px;
-  margin: 20px auto;
-  padding: 0 18px;
-  box-sizing: border-box;
-}
-
-/* Two-column Flexbox layout */
+/* Two-column layout */
 main {
   display: flex;
   gap: 24px;
-  align-items: flex-start;
-  margin-top: 18px;
+  margin: 18px;
 }
-
-/* Content and sidebar */
 article {
   flex: 1 1 65%;
-  background: #ffffff;
+  background: #fff;
   padding: 18px;
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(12,20,40,0.04);
 }
 aside {
   flex: 0 0 280px;
-  background: #ffffff;
+  background: #fff;
   padding: 16px;
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(12,20,40,0.03);
 }
 
-/* Paragraphs and typography */
+/* Paragraphs */
 p {
-  margin: 0 0 1rem 0;
-  color: #333;
+  margin-bottom: 1rem;
   font-size: 1rem;
 }
 
-/* Strong/emphasis */
+/* Strong text */
 strong {
-  color: #111;
   font-weight: 700;
 }
 
-/* Floated figure with caption */
+/* Floated image with caption */
 figure.float {
   float: left;
   margin: 0 16px 12px 0;
   width: 300px;
-  background: #fff;
-  border-radius: 6px;
-  padding: 6px;
-  box-shadow: 0 6px 16px rgba(8,12,24,0.06);
 }
 figure.float img {
-  display: block;
   width: 100%;
-  height: auto;
   border-radius: 4px;
 }
 figure.float figcaption {
   font-size: 0.9rem;
   color: #666;
-  padding-top: 6px;
   text-align: center;
-  margin: 0;
-  clear: both;
 }
 
 /* Tables */
@@ -138,55 +104,33 @@ table {
   margin: 1rem 0;
 }
 table th {
-  color: ##7059E3;
+  color: #7059E3;
   font-weight: 700;
   background-color: #e6f0fa;
   padding: 10px 8px;
   text-align: left;
+}
 table td {
   padding: 10px 8px;
   border-bottom: 1px solid rgba(0,0,0,0.06);
   text-align: left;
 }
 
-/* Forms (single-column base) */
-form {
-  margin: 0;
-}
-label {
+/* Forms */
+form label {
   display: block;
   font-weight: 600;
   margin-bottom: 6px;
 }
-input[type="text"],
-input[type="email"],
-select,
-textarea {
+input, select, textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid rgba(0,0,0,0.12);
   border-radius: 6px;
-  box-sizing: border-box;
   margin-bottom: 12px;
-  font-size: 1rem;
-}
-
-/* Multi-column form row using Flexbox */
-.form-row {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-.form-row input[type="text"],
-.form-row input[type="email"],
-.form-row select {
-  flex: 1;
 }
 
 /* Buttons */
-button,
-.btn {
-  display: inline-block;
+button {
   padding: 10px 14px;
   border-radius: 8px;
   border: none;
@@ -195,36 +139,10 @@ button,
   font-weight: 700;
   cursor: pointer;
 }
-button.secondary {
-  background: #f1f5f9;
-  color: #1b6ed8;
-  border: 1px solid rgba(27,110,216,0.12);
-}
 
 /* Utility classes */
 .highlight {
   background: yellow;
-  padding: 4px 6px;
-  border-radius: 4px;
-}
-.lead {
-  font-size: 1.05rem;
-  color: #2b3440;
-}
-
-/* ID selector example */
-#newsletter {
-  background: #fff;
-  padding: 14px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(10,20,40,0.03);
-}
-
-/* Attribute selector for PDFs */
-a[href$=".pdf"] {
-  color: #b00020;
-  font-weight: 700;
-  text-decoration: none;
 }
 
 /* Footer */
@@ -232,53 +150,12 @@ footer {
   text-align: center;
   padding: 18px 12px;
   color: #666;
-  font-size: 0.95rem;
-  margin-top: 20px;
 }
 
-/* Accessibility focus */
-a:focus,
-button:focus,
-input:focus {
-  outline: 3px solid rgba(27,110,216,0.18);
-  outline-offset: 2px;
-}
-
-/* Small helpers */
-small {
-  font-size: 0.9rem;
-  color: #666;
-}
-blockquote {
-  margin: 0 0 1rem 0;
-  padding-left: 12px;
-  border-left: 4px solid rgba(27,110,216,0.12);
-  color: #334155;
-}
-code {
-  background: #f3f6f9;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
-}
-
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 880px) {
-  h1 {
-    font-size: 1.8rem;
-    margin: 16px 0;
-    padding: 12px 0;
-  }
   main {
     display: block;
-    padding: 0;
-  }
-  article {
-    margin-bottom: 16px;
-  }
-  aside {
-    width: auto;
-    margin-bottom: 16px;
   }
   figure.float {
     float: none;
