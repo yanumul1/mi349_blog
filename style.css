@@ -68,6 +68,16 @@ aside {
   border-radius: 8px;
 }
 
+#newsletter {
+  background: #fff;
+  padding: 10px;
+  border-radius: 6px;
+
+.pdf-link {
+  color: purple;
+  font-weight: bold;
+}
+  
 p {
   margin-bottom: 10px;
   font-size: 16px;
